@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #d4af37; /* dourado */
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #111;
+}
+
+header h1 {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+.btn-insta {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #d4af37;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-insta:hover {
+    background-color: #b8912e;
+}
+
+.catalogo {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.catalogo h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.produto {
+    background-color: #111;
+    border: 1px solid #d4af37;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.chama {
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #111;
+    font-size: 0.9em;
+}
