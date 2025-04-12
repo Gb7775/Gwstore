@@ -1,29 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Produto - G&W Store</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto - G&W Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html" class="voltar">← Voltar</a>
-        <h1>G&W Store</h1>
-        <a href="https://www.instagram.com/teuuseraqui/" target="_blank" class="btn-insta">Instagram</a>
-    </header>
-
-    <main class="produto-detalhe">
-        <img id="produto-img" src="" alt="Imagem do Produto">
-        <h2 id="produto-nome">Nome do Produto</h2>
-        <p id="produto-preco">Preço</p>
-        <p id="produto-desc">Descrição</p>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 G&W Store</p>
-    </footer>
-
-    <script src="produto.js"></script>
+  <header>
+    <div class="logo">G&amp;W Store</div>
+    <nav class="menu">
+      <a href="index.html">Voltar</a>
+    </nav>
+  </header>  <main class="container" style="max-width: 800px; margin: 2rem auto;">
+    <div class="card">
+      <img src="img/produto1.jpg" alt="Produto 1">
+      <div class="card-content">
+        <h3>Nome do Produto</h3>
+        <p style="color: #d4af37; font-weight: bold; font-size: 1.1rem;">R$ 149,90</p>
+        <p>Descrição detalhada do produto. Aqui você pode destacar o material, acabamento, estilo e qualquer informação relevante.</p>
+        <div class="button" onclick="window.location.href='https://instagram.com/sualoja'">Comprar pelo Instagram</div>
+      </div>
+    </div>
+  </main>  <a href="https://instagram.com/sualoja" target="_blank" class="instagram-btn">
+    Instagram
+  </a>
 </body>
 </html>
