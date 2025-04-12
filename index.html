@@ -1,60 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G&W Store</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>G&W Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <h1>G&W Store</h1>
-        <a href="https://www.instagram.com/gwstore.oficial_?igsh=cGgxM2k4dGE1c2U" target="_blank" class="btn-insta">Instagram</a>
-    </header>
-
-    <nav id="sidebar">
-        <ul>
-            <li><a href="#">Cordões</a></li>
-            <li><a href="#">Dedeiras</a></li>
-            <li><a href="#">Pulseiras</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
+  <header>
+    <div class="logo">G&W Store</div>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="menu">
+      <ul>
+        <li><a href="#">Cordões</a></li>
+        <li><a href="#">Dedeiras</a></li>
+        <li><a href="#">Pulseiras</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
     </nav>
+    <a href="https://www.instagram.com/gwstore.oficial_?igsh=cGgxM2k4dGE1c2Ux" class="insta-btn" target="_blank"></a>
+  </header>
 
-    <section class="boas-vindas">
-        <h2>Seja bem-vindo à G&W Store!</h2>
-        <p>Estilo, exclusividade e identidade pra quem vive no detalhe. Aqui você encontra os melhores acessórios pra elevar seu visual!</p>
+  <main>
+    <section class="welcome">
+      <h1>Estilo pra quem vive no detalhe.</h1>
+      <p>Os melhores acessórios estão aqui.</p>
     </section>
 
     <section class="catalogo">
-        <h2>Catálogo Exclusivo</h2>
-        <div class="produtos">
-            <a href="produto.html?nome=Cordão+Luxo&img=img/cordao.jpg">
-                <div class="produto">
-                    <img src="img/cordao.jpg" alt="Cordão Luxo">
-                    <p>Cordão Luxo</p>
-                </div>
-            </a>
-            <a href="produto.html?nome=Dedeira+Premium&img=img/dedeira.jpg">
-                <div class="produto">
-                    <img src="img/dedeira.jpg" alt="Dedeira Premium">
-                    <p>Dedeira Premium</p>
-                </div>
-            </a>
-        </div>
-        <p class="chama">Curtiu? Chama no Insta!</p>
+      <h2>Catálogo</h2>
+      <div class="produtos">
+        <a href="produto.html?nome=Cordão Luxo&img=img/cordao.jpg">
+          <div class="produto">
+            <img src="img/cordao.jpg" alt="Cordão Luxo">
+            <p>Cordão Luxo</p>
+          </div>
+        </a>
+        <a href="produto.html?nome=Dedeira Premium&img=img/dedeira.jpg">
+          <div class="produto">
+            <img src="img/dedeira.jpg" alt="Dedeira Premium">
+            <p>Dedeira Premium</p>
+          </div>
+        </a>
+      </div>
+      <p class="cta">Curtiu? Chama no Insta!</p>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 G&W Store. Todos os direitos reservados.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 G&W Store - Todos os direitos reservados.</p>
+  </footer>
 
-    <!-- Referência para o arquivo JS -->
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
