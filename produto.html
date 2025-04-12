@@ -1,7 +1,30 @@
-<h1 id="Cordão Luxo"></h1>
-<img id="imagem-produto" src="" alt="Imagem do Produto">
-<p id="preco-produto"></p>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>G&W Store</h1>
+        <a href="https://www.instagram.com/teuuseraqui/" target="_blank" class="btn-insta">Instagram</a>
+    </header>
 
-<a href="index.html">Voltar</a>
+    <section class="detalhes-produto">
+        <h2 id="nome-produto"></h2>
+        <img id="imagem-produto" src="" alt="Produto">
+        <p id="descricao-produto"></p>
+        <p id="preco-produto"></p>
+        <a href="index.html">Voltar</a>
+    </section>
 
-<script src="script.js"></script>
+    <script src="produto.js"></script>
+</body>
+</html>
