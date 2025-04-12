@@ -1,8 +1,20 @@
-const params = new URLSearchParams(window.location.search);
-const nome = params.get('nome');
-const img = params.get('img');
-const desc = params.get('desc');
+// produto.js
+function getParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        nome: params.get('nome'),
+        img: params.get('img'),
+        preco: params.get('preco'),
+        desc: params.get('desc')
+    };
+}
 
-document.getElementById('dedeira-premium').innerText = nome;
-document.getElementById('img-produto').src = img;
-document.getElementById('desc-produto').innerText = desc;
+window.onload = () => {
+    const { nome, img, preco, desc } = getParams();
+
+    document.getElementById('produto-nome').textContent = nome;
+    document.getElementById('produto-img').src = img;
+    document.getElementById('produto-img').alt = nome;
+    document.getElementById('produto-preco').textContent = preco;
+    document.getElementById('produto-desc').textContent = desc;
+};
