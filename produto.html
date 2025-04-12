@@ -2,28 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <title>Produto - G&W Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Produto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <a href="index.html" class="voltar">← Voltar</a>
         <h1>G&W Store</h1>
         <a href="https://www.instagram.com/teuuseraqui/" target="_blank" class="btn-insta">Instagram</a>
     </header>
 
-    <section class="detalhes-produto">
-        <h2 id="dedeira-premium"></h2>
-        <img id="img/dedeira.png src="" alt="Produto">
-        <p id="descricao-produto"></p>
-        <p id="preco-produto"></p>
-        <a href="index.html">Voltar</a>
-    </section>
+    <main class="produto-detalhe">
+        <img id="produto-img" src="" alt="Imagem do Produto">
+        <h2 id="produto-nome">Nome do Produto</h2>
+        <p id="produto-preco">Preço</p>
+        <p id="produto-desc">Descrição</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 G&W Store</p>
+    </footer>
 
     <script src="produto.js"></script>
 </body>
