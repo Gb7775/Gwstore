@@ -1,16 +1,15 @@
+// Função para abrir a página de produto correspondente
+function abrirProduto(nomeProduto, imagemProduto) {
+  // Armazena os dados no localStorage
+  localStorage.setItem("produtoNome", nomeProduto);
+  localStorage.setItem("produtoImagem", imagemProduto);
+
+  // Redireciona para a página do produto
+  window.location.href = "produto.html";
+}
+
+// Função do menu hamburguer
 function toggleMenu() {
   const menu = document.getElementById("menu");
-  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
-}
-
-function abrirProduto1() {
-  window.location.href = "https://raw.githubusercontent.com/Gb7775/Gwstore/refs/heads/main/produto1.html";
-}
-
-function abrirProduto2() {
-  window.location.href = "produto.html?nome=Produto 2&img=https://via.placeholder.com/400x400";
-}
-
-function abrirProduto3() {
-  window.location.href = "produto.html?nome=Produto 3&img=https://via.placeholder.com/400x400";
+  menu.classList.toggle("show");
 }
