@@ -22,23 +22,27 @@
     <p>Estilo, atitude e exclusividade em cada detalhe.</p>
   </section>
 
-  <main class="product-grid">
-    <a href="produto1.html" class="product-card">
-      <img src="https://via.placeholder.com/200x200" alt="Produto 1" />
+  <main class="product-grid column">
+    <div class="product-card" onclick="abrirProduto('Produto 1', 'https://via.placeholder.com/400x400')">
+      <img src="https://via.placeholder.com/400x400" alt="Produto 1" />
       <h3>Produto 1</h3>
       <button>Ver mais</button>
-    </a>
-    <a href="produto2.html" class="product-card">
-      <img src="https://via.placeholder.com/200x200" alt="Produto 2" />
+    </div>
+    <div class="product-card" onclick="abrirProduto('Produto 2', 'https://via.placeholder.com/400x400')">
+      <img src="https://via.placeholder.com/400x400" alt="Produto 2" />
       <h3>Produto 2</h3>
       <button>Ver mais</button>
-    </a>
-    <a href="produto3.html" class="product-card">
-      <img src="https://via.placeholder.com/200x200" alt="Produto 3" />
+    </div>
+    <div class="product-card" onclick="abrirProduto('Produto 3', 'https://via.placeholder.com/400x400')">
+      <img src="https://via.placeholder.com/400x400" alt="Produto 3" />
       <h3>Produto 3</h3>
       <button>Ver mais</button>
-    </a>
+    </div>
   </main>
+
+  <footer>
+    <a href="https://instagram.com/gwstore" target="_blank" class="insta-button">Nosso Instagram</a>
+  </footer>
 
   <script src="script.js"></script>
 </body>
