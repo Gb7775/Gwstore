@@ -39,6 +39,8 @@ nav#menu {
   background: #111;
   display: none;
   flex-direction: column;
+  width: 200px;
+  border-left: 1px solid #222;
 }
 
 nav#menu a {
@@ -53,11 +55,12 @@ nav#menu a {
   padding: 2rem 1rem;
 }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+.product-grid.column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 2rem;
+  align-items: center;
 }
 
 .product-card {
@@ -66,12 +69,15 @@ nav#menu a {
   padding: 1rem;
   text-align: center;
   border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
   transition: transform 0.2s;
-  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .product-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .product-card img {
@@ -92,4 +98,37 @@ nav#menu a {
   border-radius: 20px;
   cursor: pointer;
   margin-top: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+.insta-button {
+  background: gold;
+  color: black;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.voltar {
+  color: gold;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.produto-detalhe {
+  text-align: center;
+  padding: 2rem;
+}
+
+.produto-detalhe img {
+  max-width: 80%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
