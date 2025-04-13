@@ -1,134 +1,90 @@
+/* G&W E-commerce Styles */
+
+/* Cores principais da G&W */
+:root {
+    --cor-principal: #009688;  /* Verde G&W */
+    --cor-secundaria: #FF5722; /* Laranja G&W */
+    --cor-texto: #333333;     /* Cor de texto */
+    --cor-fundo: #f7f7f7;     /* Cor de fundo do site */
+}
+
+/* Resetando margens e preenchimento */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
+/* Estilos do Header */
 header {
-  background: #111;
-  color: gold;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+    background-color: var(--cor-principal);
+    padding: 20px;
+    text-align: center;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 2px;
+header h1 {
+    color: white;
+    font-size: 2.5rem;
 }
 
-.hamburger {
-  font-size: 2rem;
-  cursor: pointer;
-  display: block;
+/* Estilos dos Cards de Produto */
+.card-produto {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-nav#menu {
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background: #111;
-  display: none;
-  flex-direction: column;
-  width: 200px;
-  border-left: 1px solid #222;
+.card-produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-nav#menu a {
-  padding: 1rem;
-  text-decoration: none;
-  color: gold;
-  border-top: 1px solid #222;
+.card-produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.welcome {
-  text-align: center;
-  padding: 2rem 1rem;
+.card-produto h2 {
+    margin-top: 10px;
+    color: var(--cor-principal);
+    font-size: 1.6rem;
 }
 
-.product-grid.column {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
-  align-items: center;
+.card-produto p {
+    color: var(--cor-texto);
+    font-size: 1.2rem;
 }
 
-.product-card {
-  background: #111;
-  border: 1px solid #222;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 400px;
-  transition: transform 0.2s;
-  text-decoration: none;
-  color: white;
+.card-produto .preco {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    margin-top: 10px;
 }
 
-.product-card:hover {
-  transform: scale(1.03);
+/* Botão "Adicionar ao Carrinho" */
+.btn-comprar {
+    background-color: var(--cor-secundaria);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.product-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.product-card h3 {
-  margin: 0.5rem 0;
-  color: gold;
-}
-
-.product-card button {
-  background: gold;
-  color: black;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  cursor: pointer;
-  margin-top: 0.5rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-}
-
-.insta-button {
-  background: gold;
-  color: black;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-.voltar {
-  color: gold;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.produto-detalhe {
-  text-align: center;
-  padding: 2rem;
-}
-
-.produto-detalhe img {
-  max-width: 80%;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+.btn-comprar:hover {
+    background-color: #e64a19; /* Tom mais escuro */
 }
