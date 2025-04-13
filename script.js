@@ -4,5 +4,5 @@ function abrirProduto(produtoNome, produtoImagem) {
   localStorage.setItem("produtoImagem", produtoImagem);
   
   // Redirecionar para a página do produto
-  window.location.href = produtoNome.toLowerCase().replace(" ", "") + ".html";
+  window.location.href = produtoNome.toLowerCase().replace(" ", "") + "produto1.html";
 }
