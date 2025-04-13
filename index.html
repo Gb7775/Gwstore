@@ -1,39 +1,73 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G&W E-commerce</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G&W - Estilo e Atitude</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>G&W Store</h1>
-        <div>
-            <span>Carrinho (<span id="contador-carrinho">0</span>)</span>
-        </div>
-    </header>
-
-    <section class="produtos">
-        <div class="card-produto">
-            <img src="produto1.jpg" alt="Produto 1">
-            <h2>Produto 1</h2>
-            <p>Descrição do produto 1</p>
-            <p class="preco">R$ 99,90</p>
-            <button class="btn-comprar" onclick="adicionarAoCarrinho({ id: 1, nome: 'Produto 1', preco: 99.90 })">Adicionar ao Carrinho</button>
-        </div>
-        <div class="card-produto">
-            <img src="produto2.jpg" alt="Produto 2">
-            <h2>Produto 2</h2>
-            <p>Descrição do produto 2</p>
-            <p class="preco">R$ 199,90</p>
-            <button class="btn-comprar" onclick="adicionarAoCarrinho({ id: 2, nome: 'Produto 2', preco: 199.90 })">Adicionar ao Carrinho</button>
-        </div>
-        <!-- Outros produtos -->
-    </section>
-
-    <div id="carrinho"></div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+  <header>
+    <div class="container">
+      <div class="logo">G&W</div>
+      <nav>
+        <ul>
+          <li><a href="#masculino">Masculino</a></li>
+          <li><a href="#feminino">Feminino</a></li>
+          <li><a href="#lookbook">Lookbook</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>  <section class="hero">
+    <div class="container">
+      <h2>Nova Coleção Outono/Inverno 2025</h2>
+      <p>Estilo que expressa sua atitude</p>
+      <a href="#lookbook" class="btn">Ver Lookbook</a>
+    </div>
+  </section>  <section id="masculino" class="genero container">
+    <h2>Moda Masculina</h2>
+    <div class="produtos">
+      <div class="produto"><img src="img/masc1.jpg" alt="Produto 1"><p>Tênis Urbano</p></div>
+      <div class="produto"><img src="img/masc2.jpg" alt="Produto 2"><p>Jaqueta Tech</p></div>
+      <div class="produto"><img src="img/masc3.jpg" alt="Produto 3"><p>Camiseta Oversized</p></div>
+    </div>
+  </section>  <section id="feminino" class="genero feminino container">
+    <h2>Moda Feminina</h2>
+    <div class="produtos">
+      <div class="produto"><img src="img/fem1.jpg" alt="Produto 4"><p>Top Minimalista</p></div>
+      <div class="produto"><img src="img/fem2.jpg" alt="Produto 5"><p>Calça Cargo</p></div>
+      <div class="produto"><img src="img/fem3.jpg" alt="Produto 6"><p>Casaco Teddy</p></div>
+    </div>
+  </section>  <section id="lookbook" class="lookbook container">
+    <h2>Lookbook G&W</h2>
+    <div class="galeria">
+      <img src="img/look1.jpg" alt="Look 1">
+      <img src="img/look2.jpg" alt="Look 2">
+      <img src="img/look3.jpg" alt="Look 3">
+    </div>
+  </section>  <section id="blog" class="blog container">
+    <h2>Últimas do Blog</h2>
+    <article>
+      <h3>As tendências que dominarão 2025</h3>
+      <p>Conheça as principais apostas de estilo para o próximo ano. Do streetwear ao minimalismo, o futuro da moda está aqui.</p>
+    </article>
+  </section>  <section class="newsletter">
+    <h2>Receba novidades da G&W</h2>
+    <form>
+      <input type="email" placeholder="Seu e-mail">
+      <button type="submit">Assinar</button>
+    </form>
+  </section>  <section id="contato" class="container">
+    <h2>Fale Conosco</h2>
+    <p>Tem alguma dúvida, sugestão ou elogio? Mande pra gente!</p>
+    <form>
+      <input type="text" placeholder="Seu nome">
+      <input type="email" placeholder="Seu e-mail">
+      <textarea placeholder="Sua mensagem"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>  <footer>
+    <p>&copy; 2025 G&W. Todos os direitos reservados.</p>
+  </footer>  <script src="script.js"></script></body>
+    </html>
