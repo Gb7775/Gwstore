@@ -1,4 +1,4 @@
-function abrirProduto(produtoNome, produtoImagem) {
+function abrirProduto('produto1') {
   // Salvar o nome e a imagem do produto no localStorage
   localStorage.setItem("produto1", produtoNome);
   localStorage.setItem("produtoImagem", produtoImagem);
