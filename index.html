@@ -9,27 +9,37 @@
 <body>
   <header>
     <div class="logo">G&W Store</div>
-    <nav class="menu">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
       <a href="#">Cordões</a>
       <a href="#">Dedeiras</a>
       <a href="#">Pulseiras</a>
     </nav>
-    <div class="mobile-menu-icon">☰</div>
   </header>
 
-  <main class="container">
-    <div class="card" onclick="location.href='produto.html';">
-      <img src="img/produto1.jpg" alt="Produto 1" />
-      <div class="card-content">
-        <h3>Nome do Produto</h3>
-        <p>Descrição breve ou detalhe estiloso aqui.</p>
-        <div class="button">Ver mais</div>
-      </div>
+  <section class="welcome">
+    <h1>Bem-vindo à G&W Store</h1>
+    <p>Estilo, atitude e exclusividade em cada detalhe.</p>
+  </section>
+
+  <main class="product-grid">
+    <div class="product-card" onclick="verProduto('Produto 1')">
+      <img src="https://via.placeholder.com/200x200" alt="Produto 1" />
+      <h3>Produto 1</h3>
+      <button>Ver mais</button>
+    </div>
+    <div class="product-card" onclick="verProduto('Produto 2')">
+      <img src="https://via.placeholder.com/200x200" alt="Produto 2" />
+      <h3>Produto 2</h3>
+      <button>Ver mais</button>
+    </div>
+    <div class="product-card" onclick="verProduto('Produto 3')">
+      <img src="https://via.placeholder.com/200x200" alt="Produto 3" />
+      <h3>Produto 3</h3>
+      <button>Ver mais</button>
     </div>
   </main>
 
-  <a href="https://instagram.com/sualoja" target="_blank" class="instagram-btn">
-    Instagram
-  </a>
+  <script src="script.js"></script>
 </body>
 </html>
