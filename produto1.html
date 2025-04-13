@@ -3,35 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Produto 1 - G&W Store</title>
+  <title>Produto - G&W Store</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
     <div class="logo">G&W Store</div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <nav id="menu">
-      <a href="#">Cordões</a>
-      <a href="#">Dedeiras</a>
-      <a href="#">Pulseiras</a>
-    </nav>
+    <a href="index.html" class="voltar">← Voltar</a>
   </header>
 
-  <section class="product-detail">
-    <h1>Produto 1</h1>
-    <img src="https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/imagens/dedeira.png" alt="Produto 1" />
-    <p><strong>Descrição:</strong> Este é o produto 1, com qualidade e estilo único.</p>
-    <p><strong>Preço:</strong> R$ 99,99</p>
-    <button>Comprar</button>
-  </section>
+  <main class="produto-detalhe">
+    <img id="produto-img" src="" alt="Produto" />
+    <h1 id="produto-nome">Produto</h1>
+    <p>Descrição do produto aqui. Adicione mais detalhes conforme necessário.</p>
+    <a href="https://instagram.com/gwstore" target="_blank" class="insta-button">Chamar no Instagram</a>
+  </main>
 
   <script>
-    function toggleMenu() {
-      var menu = document.getElementById('menu');
-      menu.classList.toggle('active');
-    }
-  </script>
+    const params = new URLSearchParams(window.location.search);
+    const nome = params.get('nome');
+    const img = params.get('img');
 
+    if (nome) document.getElementById('produto-nome').textContent = nome;
+    if (img) document.getElementById('produto-img').src = img;
+  </script>
 </body>
 </html>
