@@ -15,6 +15,20 @@
   <main class="produto-detalhe">
     <h1 id="produto-nome">Carregando...</h1>
     <img id="produto-imagem" src="" alt="Imagem do Produto" />
+    
+    <div class="produto-descricao">
+      <h2>Descrição</h2>
+      <p id="descricao">Descrição do produto...</p>
+    </div>
+    
+    <div class="produto-preco">
+      <h2>Preço</h2>
+      <p id="preco">R$ 0,00</p>
+    </div>
+    
+    <div class="produto-comprar">
+      <a href="https://instagram.com/gwstore" target="_blank" class="comprar-button">Comprar</a>
+    </div>
   </main>
 
   <footer>
@@ -24,6 +38,8 @@
   <script>
     document.getElementById("produto-nome").textContent = localStorage.getItem("produtoNome") || "Produto";
     document.getElementById("produto-imagem").src = localStorage.getItem("produtoImagem") || "https://via.placeholder.com/400x400";
+    document.getElementById("descricao").textContent = localStorage.getItem("produtoDescricao") || "Descrição do produto...";
+    document.getElementById("preco").textContent = localStorage.getItem("produtoPreco") || "R$ 0,00";
   </script>
 </body>
 </html>
