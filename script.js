@@ -4,7 +4,7 @@ function toggleMenu() {
 }
 
 function abrirProduto1() {
-  window.location.href = "https://raw.githubusercontent.com/Gb7775/Gwstore/refs/heads/main/produto1.htmlimg=https://via.placeholder.com/400x400";
+  window.location.href = "https://raw.githubusercontent.com/Gb7775/Gwstore/refs/heads/main/produto1.html";
 }
 
 function abrirProduto2() {
