@@ -6,7 +6,7 @@ function toggleMenu() {
 
 // Função para redirecionar para a página de detalhes do produto
 function verProduto(produto) {
-  if (produto === 'Produto 1') {
+  if (produto === 'CORDÃO CADEADO 7MM') {
     window.location.href = 'https://raw.githubusercontent.com/Gb7775/Gwstore/refs/heads/main/produto1.html'; // Página do Produto 1
   } else if (produto === 'Produto 2') {
     window.location.href = 'produto2.html'; // Página do Produto 2
