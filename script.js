@@ -5,7 +5,7 @@ function abrirProduto(nomeProduto, imagemProduto) {
   localStorage.setItem("produtoImagem", imagemProduto);
 
   // Redireciona para a página do produto
-  window.location.href = "produto.html";
+  window.location.href = "https://raw.githubusercontent.com/Gb7775/Gwstore/refs/heads/main/produto1.html";
 }
 
 // Função do menu hamburguer
