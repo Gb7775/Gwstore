@@ -1,54 +1,47 @@
-// Script de E-commerce - G&W
+// Efeito de rolagem suave nos links do menu
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
 
-// Função para adicionar ao carrinho
-function adicionarAoCarrinho(produto) {
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
     
-    // Verificar se o produto já existe no carrinho
-    const produtoExistente = carrinho.find(item => item.id === produto.id);
-    
-    if (produtoExistente) {
-        produtoExistente.quantidade++;
-    } else {
-        produto.quantidade = 1;
-        carrinho.push(produto);
+    window.scrollTo({
+      top: targetElement.offsetTop - 80,
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Animações de entrada para elementos ao rolar a página
+const sections = document.querySelectorAll('section');
+const options = {
+  threshold: 0.2
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate__fadeInUp');
     }
-    
-    // Salvar o carrinho no localStorage
-    localStorage.setItem('carrinho', JSON.stringify(carrinho));
-    
-    // Atualizar o contador do carrinho na UI
-    atualizarCarrinho();
-}
+  });
+}, options);
 
-// Função para atualizar o carrinho
-function atualizarCarrinho() {
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    const contadorCarrinho = document.getElementById('contador-carrinho');
-    contadorCarrinho.textContent = carrinho.length;
-}
+sections.forEach(section => {
+  observer.observe(section);
+});
 
-// Função para exibir o carrinho
-function exibirCarrinho() {
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    const carrinhoDiv = document.getElementById('carrinho');
-    carrinhoDiv.innerHTML = '';
+// Funcionalidade do formulário de newsletter
+const newsletterForm = document.querySelector('.newsletter form');
+newsletterForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const emailInput = newsletterForm.querySelector('input[type="email"]');
+  const email = emailInput.value;
 
-    if (carrinho.length === 0) {
-        carrinhoDiv.innerHTML = '<p>Carrinho vazio</p>';
-    } else {
-        carrinho.forEach(item => {
-            carrinhoDiv.innerHTML += `
-                <div>
-                    <h4>${item.nome} - Quantidade: ${item.quantidade}</h4>
-                    <p>Preço: R$ ${item.preco}</p>
-                </div>
-            `;
-        });
-    }
-}
-
-// Inicialização
-document.addEventListener('DOMContentLoaded', () => {
-    atualizarCarrinho();
+  if (email) {
+    alert('Inscrição realizada com sucesso!');
+    emailInput.value = ''; // Limpar o campo de email
+  } else {
+    alert('Por favor, insira um email válido.');
+  }
 });
