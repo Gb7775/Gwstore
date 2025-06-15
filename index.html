@@ -1,73 +1,291 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G&W - Estilo e Atitude</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comece a Vender Hoje - Seu Novo Jeito de Empreender Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #4F46E5 0%, #10B981 100%);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7);
+            }
+            70% {
+                transform: scale(1.02);
+                box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+            }
+        }
+        
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="container">
-      <div class="logo">G&W</div>
-      <nav>
-        <ul>
-          <li><a href="#masculino">Masculino</a></li>
-          <li><a href="#feminino">Feminino</a></li>
-          <li><a href="#lookbook">Lookbook</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>  <section class="hero">
-    <div class="container">
-      <h2>Nova Coleção Outono/Inverno 2025</h2>
-      <p>Estilo que expressa sua atitude</p>
-      <a href="#lookbook" class="btn">Ver Lookbook</a>
-    </div>
-  </section>  <section id="masculino" class="genero container">
-    <h2>Moda Masculina</h2>
-    <div class="produtos">
-      <div class="produto"><img src="img/masc1.jpg" alt="Produto 1"><p>Tênis Urbano</p></div>
-      <div class="produto"><img src="img/masc2.jpg" alt="Produto 2"><p>Jaqueta Tech</p></div>
-      <div class="produto"><img src="img/masc3.jpg" alt="Produto 3"><p>Camiseta Oversized</p></div>
-    </div>
-  </section>  <section id="feminino" class="genero feminino container">
-    <h2>Moda Feminina</h2>
-    <div class="produtos">
-      <div class="produto"><img src="img/fem1.jpg" alt="Produto 4"><p>Top Minimalista</p></div>
-      <div class="produto"><img src="img/fem2.jpg" alt="Produto 5"><p>Calça Cargo</p></div>
-      <div class="produto"><img src="img/fem3.jpg" alt="Produto 6"><p>Casaco Teddy</p></div>
-    </div>
-  </section>  <section id="lookbook" class="lookbook container">
-    <h2>Lookbook G&W</h2>
-    <div class="galeria">
-      <img src="img/look1.jpg" alt="Look 1">
-      <img src="img/look2.jpg" alt="Look 2">
-      <img src="img/look3.jpg" alt="Look 3">
-    </div>
-  </section>  <section id="blog" class="blog container">
-    <h2>Últimas do Blog</h2>
-    <article>
-      <h3>As tendências que dominarão 2025</h3>
-      <p>Conheça as principais apostas de estilo para o próximo ano. Do streetwear ao minimalismo, o futuro da moda está aqui.</p>
-    </article>
-  </section>  <section class="newsletter">
-    <h2>Receba novidades da G&W</h2>
-    <form>
-      <input type="email" placeholder="Seu e-mail">
-      <button type="submit">Assinar</button>
-    </form>
-  </section>  <section id="contato" class="container">
-    <h2>Fale Conosco</h2>
-    <p>Tem alguma dúvida, sugestão ou elogio? Mande pra gente!</p>
-    <form>
-      <input type="text" placeholder="Seu nome">
-      <input type="email" placeholder="Seu e-mail">
-      <textarea placeholder="Sua mensagem"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>  <footer>
-    <p>&copy; 2025 G&W. Todos os direitos reservados.</p>
-  </footer>  <script src="script.js"></script></body>
-    </html>
+<body class="bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-book-open text-primary text-2xl mr-2"></i>
+                <span class="text-xl font-bold text-dark">Empreenda Digital</span>
+            </div>
+            <div>
+                <a href="#comprar" class="text-primary font-medium hover:text-primary-dark">Comprar eBook</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Comece a vender hoje! <br>Seu novo jeito de <span class="underline">empreender online</span></h1>
+                <p class="text-xl mb-8">O guia definitivo para criar seu negócio digital do zero e conquistar sua liberdade financeira</p>
+                <a href="https://www.hotmart.com" id="comprar" class="bg-white text-primary font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300 pulse-animation inline-flex items-center">
+                    QUERO MEU EBOOK AGORA! <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Capa do eBook Comece a Vender Hoje" class="rounded-xl shadow-2xl w-full max-w-md mx-auto border-4 border-white">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">O que você vai aprender neste eBook?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="benefit-card bg-light p-8 rounded-xl">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Ideias Lucrativas</h3>
+                    <p class="text-gray-600">Descubra os melhores nichos de mercado e como identificar oportunidades reais para começar seu negócio digital.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="benefit-card bg-light p-8 rounded-xl">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Estratégias Comprovadas</h3>
+                    <p class="text-gray-600">Métodos testados e aprovados por empreendedores digitais que já faturam mais de R$ 10.000/mês.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="benefit-card bg-light p-8 rounded-xl">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Ferramentas Essenciais</h3>
+                    <p class="text-gray-600">Acesso às melhores ferramentas gratuitas e pagas para alavancar seus resultados sem complicação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">O que dizem nossos leitores</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Depois de ler este eBook, finalmente consegui estruturar meu negócio online. Em 3 meses já estava faturando mais do que no meu emprego!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-3">A</div>
+                        <div>
+                            <p class="font-medium">Ana Carolina</p>
+                            <p class="text-sm text-gray-500">Empreendedora Digital</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"O guia mais completo que já vi! Me mostrou passo a passo como criar minha loja virtual e hoje tenho liberdade geográfica e financeira."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white font-bold mr-3">R</div>
+                        <div>
+                            <p class="font-medium">Ricardo Almeida</p>
+                            <p class="text-sm text-gray-500">Dono de E-commerce</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Não perca mais tempo!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Comece hoje mesmo a construir o negócio dos seus sonhos e conquiste sua liberdade financeira.</p>
+            <a href="https://www.hotmart.com" class="bg-white text-primary font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300 inline-flex items-center">
+                QUERO MEU EBOOK AGORA! <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">Perguntas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="flex justify-between items-center w-full text-left font-medium text-dark">
+                        <span>O eBook é adequado para iniciantes?</span>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="mt-2 text-gray-600">
+                        Sim! Nosso eBook foi desenvolvido especialmente para quem está começando do zero. Explicamos tudo de forma simples e prática, com exemplos reais e passo a passo.
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="flex justify-between items-center w-full text-left font-medium text-dark">
+                        <span>Quanto tempo leva para ver resultados?</span>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="mt-2 text-gray-600">
+                        Isso varia conforme seu empenho e aplicação das estratégias. Alguns alunos começam a ver os primeiros resultados em 30 dias, mas o ideal é se dedicar por pelo menos 3 meses para consolidar seu negócio.
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="border-b border-gray-200 pb-4">
+                    <button class="flex justify-between items-center w-full text-left font-medium text-dark">
+                        <span>Há algum suporte após a compra?</span>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="mt-2 text-gray-600">
+                        Sim! Além do eBook completo, você terá acesso a um grupo exclusivo no Telegram onde poderá tirar dúvidas e interagir com outros empreendedores.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-6">Pronto para transformar sua vida?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Adquira agora mesmo o eBook "Comece a Vender Hoje" e dê o primeiro passo rumo à sua liberdade.</p>
+            <a href="https://www.hotmart.com" class="bg-primary text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-primary-dark transition duration-300 inline-flex items-center pulse-animation">
+                COMPRAR EBOOK AGORA <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center mb-6">
+                <i class="fas fa-book-open text-primary text-2xl mr-2"></i>
+                <span class="text-xl font-bold">Empreenda Digital</span>
+            </div>
+            <p class="text-gray-400 mb-4">O guia definitivo para seu negócio online</p>
+            <p class="text-gray-400">© 2025 Empreenda Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ toggle functionality
+        document.querySelectorAll('section.faq button').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (answer.style.display === 'none' || !answer.style.display) {
+                    answer.style.display = 'block';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    answer.style.display = 'none';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
